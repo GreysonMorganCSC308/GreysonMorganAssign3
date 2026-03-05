@@ -48,7 +48,7 @@
                                     <color key="baseBackgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="KUU-lF-Ppn" kind="show" identifier="cookieSegue" id="4EO-Df-Sex"/>
+                                    <action selector="cookieButtonTapped:" destination="s6L-cP-eoP" eventType="touchUpInside" id="2i9-FA-ZSQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-LT-P6e">
@@ -78,7 +78,7 @@
                                     <color key="baseBackgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="KUU-lF-Ppn" kind="show" identifier="saladSegue" id="R5S-Pn-zIo"/>
+                                    <action selector="saladButtonTapped:" destination="s6L-cP-eoP" eventType="touchUpInside" id="MjW-Vu-vUl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMG-er-73o">
@@ -93,7 +93,7 @@
                                     <color key="baseBackgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="W0C-dP-OYG" kind="show" id="SKg-pK-Op0"/>
+                                    <segue destination="W0C-dP-OYG" kind="show" identifier="reviewSegue" id="SKg-pK-Op0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your rating: - / 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdm-dr-vfQ">
@@ -138,12 +138,13 @@
                         <outlet property="reviewLabel" destination="mdm-dr-vfQ" id="LDG-4c-Mo2"/>
                         <outlet property="saladButton" destination="5zI-WT-Kdq" id="oxe-6M-rHy"/>
                         <outlet property="soupButton" destination="QcV-LT-P6e" id="Tno-7g-fku"/>
-                        <segue destination="KUU-lF-Ppn" kind="show" identifier="soupSegue" id="nRs-6A-pDs"/>
+                        <segue destination="KUU-lF-Ppn" kind="show" identifier="cookieSegue" id="FBz-GC-MjB"/>
+                        <segue destination="KUU-lF-Ppn" kind="show" identifier="saladSegue" id="pBZ-rh-yzj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOg-UI-Sap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="63"/>
+            <point key="canvasLocation" x="705" y="50"/>
         </scene>
         <!--Review Controller-->
         <scene sceneID="GxP-mr-2WO">
@@ -188,7 +189,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-s4-cU3">
                                 <rect key="frame" x="16" y="274" width="361" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOy-KM-C6L">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOy-KM-C6L">
                                         <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Poor"/>
@@ -196,7 +197,7 @@
                                             <action selector="reviewButtonTapped:" destination="W0C-dP-OYG" eventType="touchUpInside" id="iBr-Ac-BvO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-Ib-KrW">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-Ib-KrW">
                                         <rect key="frame" x="73.333333333333329" y="0.0" width="67.999999999999986" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Fair"/>
@@ -204,7 +205,7 @@
                                             <action selector="reviewButtonTapped:" destination="W0C-dP-OYG" eventType="touchUpInside" id="6Vp-QP-eYA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-qH-jUL">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-qH-jUL">
                                         <rect key="frame" x="146.33333333333334" y="0.0" width="68.333333333333343" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Good"/>
@@ -212,7 +213,7 @@
                                             <action selector="reviewButtonTapped:" destination="W0C-dP-OYG" eventType="touchUpInside" id="LO3-ok-2A0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-Cw-94C">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-Cw-94C">
                                         <rect key="frame" x="219.66666666666666" y="0.0" width="67.999999999999972" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Very Good"/>
@@ -220,7 +221,7 @@
                                             <action selector="reviewButtonTapped:" destination="W0C-dP-OYG" eventType="touchUpInside" id="QNH-wu-JiT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmL-Ud-W7O">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmL-Ud-W7O">
                                         <rect key="frame" x="292.66666666666669" y="0.0" width="68.333333333333314" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Excellent"/>
@@ -256,6 +257,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="reviewLabel" destination="XbU-wW-cdA" id="iKj-Ic-pAy"/>
+                        <outletCollection property="starButtons" destination="OOy-KM-C6L" collectionClass="NSMutableArray" id="08C-9m-tuC"/>
+                        <outletCollection property="starButtons" destination="lRa-Ib-KrW" collectionClass="NSMutableArray" id="zSR-H7-MBR"/>
+                        <outletCollection property="starButtons" destination="hEM-qH-jUL" collectionClass="NSMutableArray" id="cPQ-Iv-U6x"/>
+                        <outletCollection property="starButtons" destination="fmW-Cw-94C" collectionClass="NSMutableArray" id="Jf3-zU-Tz2"/>
+                        <outletCollection property="starButtons" destination="AmL-Ud-W7O" collectionClass="NSMutableArray" id="otz-mY-88a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gb-of-reV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,7 +271,7 @@
         <!--Recipe Controller-->
         <scene sceneID="aoS-w9-4PZ">
             <objects>
-                <viewController id="KUU-lF-Ppn" customClass="RecipeController" customModule="GreysonMorganAssign3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeController" id="KUU-lF-Ppn" customClass="RecipeController" customModule="GreysonMorganAssign3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1g7-Pk-FXE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,9 +292,9 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Cz-CZ-Dlc">
-                                <rect key="frame" x="16" y="534" width="361" height="250"/>
+                                <rect key="frame" x="16" y="534" width="361" height="275"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="7xN-3l-eaw"/>
+                                    <constraint firstAttribute="height" constant="275" id="8xM-1I-YYb"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -299,15 +305,15 @@
                         <viewLayoutGuide key="safeArea" id="fFX-j6-NR2"/>
                         <color key="backgroundColor" red="0.97967308760000005" green="0.90089762210000002" blue="0.77097648379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4Cz-CZ-Dlc" firstAttribute="top" secondItem="nsx-Wg-yZw" secondAttribute="bottom" constant="10" id="5uQ-mV-sK8"/>
                             <constraint firstItem="nsx-Wg-yZw" firstAttribute="leading" secondItem="fFX-j6-NR2" secondAttribute="leading" id="7Vu-XW-lOd"/>
-                            <constraint firstItem="4Cz-CZ-Dlc" firstAttribute="leading" secondItem="fFX-j6-NR2" secondAttribute="leading" constant="16" id="84w-NO-nCX"/>
                             <constraint firstItem="fFX-j6-NR2" firstAttribute="trailing" secondItem="4JO-ac-ImS" secondAttribute="trailing" constant="16" id="FeF-3J-3Ef"/>
                             <constraint firstItem="fFX-j6-NR2" firstAttribute="trailing" secondItem="nsx-Wg-yZw" secondAttribute="trailing" id="VLm-Ai-Apk"/>
                             <constraint firstItem="4JO-ac-ImS" firstAttribute="leading" secondItem="fFX-j6-NR2" secondAttribute="leading" constant="16" id="WIC-h3-Hhi"/>
-                            <constraint firstItem="fFX-j6-NR2" firstAttribute="trailing" secondItem="4Cz-CZ-Dlc" secondAttribute="trailing" constant="16" id="YAQ-JQ-cLZ"/>
-                            <constraint firstItem="4Cz-CZ-Dlc" firstAttribute="top" secondItem="nsx-Wg-yZw" secondAttribute="bottom" constant="10" id="ekc-AH-EW6"/>
                             <constraint firstItem="4JO-ac-ImS" firstAttribute="top" secondItem="fFX-j6-NR2" secondAttribute="top" constant="10" id="iBN-9z-WgB"/>
                             <constraint firstItem="nsx-Wg-yZw" firstAttribute="top" secondItem="4JO-ac-ImS" secondAttribute="bottom" constant="10" id="kw3-KQ-tsS"/>
+                            <constraint firstItem="fFX-j6-NR2" firstAttribute="trailing" secondItem="4Cz-CZ-Dlc" secondAttribute="trailing" constant="16" id="moO-yP-6TK"/>
+                            <constraint firstItem="4Cz-CZ-Dlc" firstAttribute="leading" secondItem="fFX-j6-NR2" secondAttribute="leading" constant="16" id="x0B-lb-6ot"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ret-Wx-jfy">
@@ -325,7 +331,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nRs-6A-pDs"/>
+        <segue reference="FBz-GC-MjB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="360" height="659"/>
